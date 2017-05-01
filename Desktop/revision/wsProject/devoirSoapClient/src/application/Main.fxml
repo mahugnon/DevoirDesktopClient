@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlleur">
+   <children>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="-1.0" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: yellowgreen;" text="Bureau Publication" textFill="#285b3b">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label blendMode="HARD_LIGHT" layoutX="10.0" layoutY="103.0" text="Contenu :" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <MotionBlur />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </SepiaTone>
+         </effect>
+      </Label>
+      <Label blendMode="HARD_LIGHT" layoutX="10.0" layoutY="208.0" prefHeight="18.0" prefWidth="62.0" text="Email     :" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <MotionBlur />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </SepiaTone>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="contenu" layoutX="86.0" layoutY="72.0" prefHeight="98.0" prefWidth="200.0" promptText="saissez le contenu de votre publication" />
+      <TextField fx:id="email" layoutX="86.0" layoutY="204.0" prefHeight="27.0" prefWidth="200.0" promptText="saissez votre email" />
+      <Button fx:id="envoyer" layoutX="33.0" layoutY="259.0" mnemonicParsing="false" onAction="#savePost" prefHeight="33.0" prefWidth="79.0" text="Envoyer" textFill="#27c447da" />
+      <Button fx:id="annuler" layoutX="169.0" layoutY="259.0" mnemonicParsing="false" onAction="#savePost" prefHeight="33.0" prefWidth="79.0" text="Annuler" textFill="#9a1523" />
+      <Label fx:id="success" layoutX="3.0" layoutY="231.0" prefHeight="27.0" prefWidth="294.0" textAlignment="CENTER" textFill="#36da46">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font></Label>
+      <Label fx:id="echec" layoutX="2.0" layoutY="231.0" prefHeight="27.0" prefWidth="294.0" textAlignment="CENTER" textFill="#ee3a3a">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font></Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
